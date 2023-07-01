@@ -11,7 +11,7 @@ ssh -o StrictHostKeychecking=no pasta@"$ip_address" << EOF
     wget http://$vpn/screen-exp.sh && chmod +x screen-exp.sh && ./screen-exp.sh
     sleep 3
 
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh
+    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$nick"
     echo "root:$password" | chpasswd
     echo "food:$password" | chpasswd
     echo "tryhackme:$password" | chpasswd
