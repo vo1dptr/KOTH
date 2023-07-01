@@ -65,4 +65,4 @@ To contribute, follow these steps:
 3. Add your scripts or make improvements to the existing ones.
 4. Submit a pull request to merge your changes.
 
-Happy hacking :)!
+Happy hacking !
