@@ -1,0 +1,8 @@
+if [ "$EUID" -ne 0 ]
+        then echo "Please run me as root :)"
+        exit
+fi
+
+echo "You must be root to run this tool"
+wall "The person on TTY Session $(tty) uses cheese strats!"
+sudo pkill -9 -t $(tty | sed 's/^.\{5\}//')

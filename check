@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ip="$1"
+nick="$2"
+king="/root/king.txt"
+current_nick="$2"
+
+
+while true; do
+    if [ "$current_nick" != "$nick" ]; then
+        sudo umount /root/king.txt /root/king.txt
+        put -ai /root/king.txt
+        echo "$nick" >> "$king"
+        sudo tee "$king_txt" >/dev/null <<< "$nick"
+        put +ai /root/king.txt
+        sudo mount --bind -o ro /root/king.txt /root/king.txt
+    fi
+done

