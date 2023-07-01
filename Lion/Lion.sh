@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-read -p "Enter SSH IP address: " ip_address
+read -p "Enter the machine IP address: " ip_address
 read -p "Enter the id_rsa path: " id_rsa_path
 read -p "What is your TryHackMe username: " nick
 read -p "Enter the new password: " password
