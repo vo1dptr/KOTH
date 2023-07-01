@@ -3,7 +3,7 @@
 
 
 read -p "Your TryHackMe username: " nick
-read -p "Enter SSH IP address: " ip_address
+read -p "Enter the machine IP address: " ip_address
 read -s -p "Enter the new password: " password
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
