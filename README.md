@@ -12,7 +12,7 @@
 
 **Use these scripts at your own risk.**
 
-### The creator of this repository and the scripts cannot be held responsible for any consequences or actions resulting from the use of these automated scripts.
+### The creator of this repository and the scripts cannot be held responsible for any consequences resulting from the use of these automated scripts.
 
 ## King of the Hill Machines
 
