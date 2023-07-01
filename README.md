@@ -8,7 +8,7 @@
 
 ## Disclaimer
 
-### Using these automated scripts in public games or competitions may result in penalties or bans from the TryHackMe platform..
+### Using these automated scripts in public games or competitions may result in bans from the TryHackMe platform..
 
 **Use these scripts at your own risk.**
 
