@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Your VPN IP: " vpn
+
 read -p "Your TryHackMe username: " nick
 read -p "Enter SSH IP address: " ip_address
 read -s -p "Enter the new password: " password
