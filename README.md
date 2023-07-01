@@ -51,6 +51,9 @@ The scripts in this repository are specifically tailored for the following nine 
 5. Run the script :
  
        ./Machine-NAME.sh
+
+### Please ensure to set the correct permissions for the `id_rsa` files by using `chmod 600 id_rsa`, and grant execution permission to the scripts using `chmod +x`.
+
    
 #### Before using the automated scripts, make sure to run the `Requirements` script provided in this repository and keep it runing until the koth game ends. 
 
