@@ -18,15 +18,15 @@
 
 The scripts in this repository are specifically tailored for the following nine King of the Hill machines on TryHackMe:
 
-1. ["Food"](https://github.com/H3X-007/KOTH-v2/tree/main/Food)
-2. ["Fortune"](https://github.com/H3X-007/KOTH-v2/tree/main/Fortune)
-3. ["Panda"](https://github.com/H3X-007/KOTH-v2/tree/main/Panda)
-4. ["Production"](https://github.com/H3X-007/KOTH-v2/tree/main/Production)
-5. ["Lion"](https://github.com/H3X-007/KOTH-v2/tree/main/Lion)
-6. ["Hackers"](https://github.com/H3X-007/KOTH-v2/tree/main/Hackers)
-7. ["Hogwarts"](https://github.com/H3X-007/KOTH-v2/tree/main/Hogwarts)
-8. ["Shrek"](https://github.com/H3X-007/KOTH-v2/tree/main/Shrek)
-9. ["Tyler"](https://github.com/H3X-007/KOTH-v2/tree/main/Tyler)
+1. [Food](https://github.com/H3X-007/KOTH-v2/tree/main/Food)
+2. [Fortune](https://github.com/H3X-007/KOTH-v2/tree/main/Fortune)
+3. [Panda](https://github.com/H3X-007/KOTH-v2/tree/main/Panda)
+4. [Production](https://github.com/H3X-007/KOTH-v2/tree/main/Production)
+5. [Lion](https://github.com/H3X-007/KOTH-v2/tree/main/Lion)
+6. [Hackers](https://github.com/H3X-007/KOTH-v2/tree/main/Hackers)
+7. [Hogwarts](https://github.com/H3X-007/KOTH-v2/tree/main/Hogwarts)
+8. [Shrek](https://github.com/H3X-007/KOTH-v2/tree/main/Shrek)
+9. [Tyler](https://github.com/H3X-007/KOTH-v2/tree/main/Tyler)
 
 **Note:** If you cannot find the machine credentials or `id_rsa` file, you will need to manually obtain the necessary credentials for the specific machine you are playing then run the automated script.
 
