@@ -14,4 +14,5 @@ while true; do
         sudo tee "$king_txt" >/dev/null <<< "$nick"
         put +ai /root/king.txt
         sudo mount --bind -o ro /root/king.txt /root/king.txt
+    fi
 done
