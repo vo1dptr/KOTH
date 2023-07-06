@@ -5,7 +5,6 @@ nick="$1"
 king="/root/king.txt"
 current_nick="$1"
 
-
 while true; do
     if [ "$current_nick" != "$nick" ]; then
         sudo umount /root/king.txt /root/king.txt
