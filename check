@@ -1,4 +1,5 @@
 #!/bin/bash
+# Created by @H3X-007 :)
 
 ip="$1"
 nick="$2"
