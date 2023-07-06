@@ -1,4 +1,5 @@
 #!/bin/bash
+# Created by @H3X-007 :)
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
