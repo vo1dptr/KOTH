@@ -13,7 +13,7 @@ if [[ $(id -u) -ne 0 ]]; then
 else
     echo -e "${GREEN}You have root privileges. Continuing with the script...${RESET}"
 fi
-
+echo
 echo -e "${GREEN}Hi, I am The KOTH Script ... I have been created by H3X-007 to make sure you are the KING :)${RESET}"
 echo
 echo -e "Join our Discord Server: ${YELLOW}https://discord.gg/568RgwjZYk${RESET}"
