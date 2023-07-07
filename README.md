@@ -40,6 +40,10 @@ The scripts in this repository are specifically tailored for the following nine 
        
        cd KOTH-v2
 
+3. Enable execution privileges for Requirements :
+    
+       chmod +x Requirements.sh
+   
 3. Run Requirements :
     
        sudo ./Requirements.sh
