@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 read -p "Enter the machine IP address: " ip_address
 read -p "Enter the id_rsa path: " id_rsa_path
