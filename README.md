@@ -69,11 +69,4 @@ The scripts in this repository are specifically tailored for the following nine 
 
 This project encourages collaboration and contributions from other players who enjoy playing King of the Hill on TryHackMe. If you have additional automated scripts for other KOTH machines or if you would like to further develop the existing scripts, your contributions are highly appreciated!
 
-To contribute, follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for your contributions.
-3. Add your scripts or make improvements to the existing ones.
-4. Submit a pull request to merge your changes.
-
 ### Happy hacking !
