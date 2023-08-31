@@ -44,7 +44,7 @@ The scripts in this repository are specifically tailored for the following nine 
     
        chmod +x Run-Me-Only1Time.sh
    
-4. Run Run-Me-1Time:
+4. Run Run-Me-Only1Time:
 
        ./Run-Me-Only1Time.sh
 
