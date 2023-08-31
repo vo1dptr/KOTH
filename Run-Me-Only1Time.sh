@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-# Run me script
+# Run me Script
+
 chmod +x Requirements.sh
 chmod +x Food/Food.sh
 chmod +x Fortune/Fortune.sh
