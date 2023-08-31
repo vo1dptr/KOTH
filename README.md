@@ -40,19 +40,23 @@ The scripts in this repository are specifically tailored for the following nine 
        
        cd KOTH-v2
 
-3. Enable execution privileges for Requirements :
+3. Enable execution privileges for Run-Me-1Time :
     
-       chmod +x Requirements.sh
+       chmod +x Run-Me-1Time.sh
    
-3. Run Requirements :
-    
-       sudo ./Requirements.sh
+4. Run Run-Me-1Time:
 
-4. Change to the machine directory :
+       ./Run-Me-1Time.sh
+
+5. Run Requirements :
+    
+       sudo ./Requirements.sh 
+
+6. Change to the machine directory :
        
        cd MACHINE-NAME
 
-5. Run the script :
+7. Run the script :
  
        ./Machine-NAME.sh
 
