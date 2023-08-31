@@ -40,13 +40,13 @@ The scripts in this repository are specifically tailored for the following nine 
        
        cd KOTH-v2
 
-3. Enable execution privileges for Run-Me-1Time :
+3. Enable execution privileges for Run-Me-Only1Time :
     
-       chmod +x Run-Me-1Time.sh
+       chmod +x Run-Me-Only1Time.sh
    
 4. Run Run-Me-1Time:
 
-       ./Run-Me-1Time.sh
+       ./Run-Me-Only1Time.sh
 
 5. Run Requirements :
     
