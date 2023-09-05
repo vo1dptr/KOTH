@@ -28,7 +28,7 @@ The scripts in this repository are specifically tailored for the following nine 
 8. [Shrek](https://github.com/H3X-007/KOTH-v2/tree/main/Shrek)
 9. [Tyler](https://github.com/H3X-007/KOTH-v2/tree/main/Tyler)
 
-**Note:** If you cannot find the machine credentials or `id_rsa` file, you will need to manually obtain the necessary credentials for the specific machine you are playing then run the automated script.
+### **Note:** If you cannot find the machine credentials or `id_rsa` file, you will need to manually obtain the necessary credentials for the specific machine you are playing then run the automated script.
 
 ## Usage
 
