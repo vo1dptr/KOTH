@@ -60,14 +60,12 @@ The scripts in this repository are specifically tailored for the following nine 
  
        ./Machine-NAME.sh
 
-### Please ensure to set the correct permissions for the `id_rsa` files by using `chmod 600 id_rsa`, and grant execution permission to the scripts using `chmod +x`.
-
    
 #### Before using the automated scripts, make sure to run the `Requirements` script provided in this repository and keep it runing until the koth game ends. 
 
 **Note:** If you are playing on a machine that is not included in the provided list, you can still use the KOTH script by executing the following command on the koth machine:
 
-    ./koth.sh "YOUR VPN IP HERE" "YOUR TRYHACKME USERNAME HERE"
+    ./koth.sh "YOUR THM VPN IP HERE" "YOUR TRYHACKME USERNAME HERE"
 
 ## Contributing
 
