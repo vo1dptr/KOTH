@@ -40,23 +40,19 @@ The scripts in this repository are specifically tailored for the following nine 
        
        cd KOTH-v2
 
-3. Enable execution privileges for Run-Me-Only1Time :
+3. Enable execution privileges for Run-Me-Only1Time & Run it :
     
-       chmod +x Run-Me-Only1Time.sh
-   
-4. Run Run-Me-Only1Time:
+       chmod +x Run-Me-Only1Time.sh && ./Run-Me-Only1Time.sh   
 
-       ./Run-Me-Only1Time.sh
-
-5. Run Requirements :
+4. Run Requirements :
     
        sudo ./Requirements.sh 
 
-6. Change to the machine directory :
+5. Change to the machine directory :
        
        cd MACHINE-NAME
 
-7. Run the script :
+6. Run the script :
  
        ./Machine-NAME.sh
 
@@ -69,6 +65,6 @@ The scripts in this repository are specifically tailored for the following nine 
 
 ## Contributing
 
-This project encourages collaboration and contributions from other players who enjoy playing King of the Hill on TryHackMe. If you have additional automated scripts for other KOTH machines or if you would like to further develop the existing scripts, your contributions are highly appreciated!
+I encourage other players to join me, whether you have more scripts for different KOTH challenges or ideas to improve the existing ones. Your contributions are appreciated!
 
 ### Happy hacking !
