@@ -3,7 +3,7 @@
 # Run me Script
 
 chmod +x Requirements.sh
-chmod +x Food/Food.sh
+chmod +x Food/Food.sh && chmod +x Food/Cracker.sh
 chmod +x Fortune/Fortune.sh
 chmod +x Hackers/Hackers.sh
 chmod +x Lion/Lion.sh && chmod 600 Lion/id_rsa
