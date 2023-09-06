@@ -11,4 +11,4 @@ else
     echo -e "${GREEN}You have root privileges. Continuing with the script...${RESET}"
 fi
 
-sudo python3 -m http.server 80 &
+sudo python3 -m http.server 80 
