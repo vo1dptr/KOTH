@@ -1,6 +1,4 @@
 #!/bin/bash
-set -x
-
 
 read -p "Your TryHackMe username: " nick
 read -p "Enter the machine IP address: " ip_address
