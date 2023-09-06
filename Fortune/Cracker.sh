@@ -1,4 +1,12 @@
 #!/bin/bash
+missing() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    echo "Install '$1' before running Cracker script."
+    exit 1
+  fi
+}
+missing fcrackzip
+missing unzip
 
 while getopts ":i:w:" opt; do
   case $opt in
