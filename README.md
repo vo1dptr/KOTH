@@ -34,7 +34,7 @@ The scripts in this repository are specifically tailored for the following nine 
 
 1. Clone the repository:
     
-       git clone https://github.com/H3X-007/KOTH-v2.git
+       git clone https://github.com/H3X-007/KOTH.git
 
 2. Change to the KOTH-Scripts directory:
        
