@@ -38,7 +38,7 @@ The scripts in this repository are specifically tailored for the following nine 
 
 2. Change to the KOTH-Scripts directory:
        
-       cd KOTH-v2
+       cd KOTH
 
 3. Enable execution privileges for Run-Me-Only1Time & Run it :
     
