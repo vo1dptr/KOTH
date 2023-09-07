@@ -13,7 +13,7 @@ while getopts ":i:u:p:" opt; do
   case $opt in
     i) ip_address="$OPTARG" ;;
     u) username="$OPTARG" ;;
-    p) password="$OPTARG" ;;
+    p) new_password="$OPTARG" ;;
   esac
 done
 
