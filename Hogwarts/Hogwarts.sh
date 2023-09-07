@@ -19,14 +19,14 @@ rm -rf file.zip 2>/dev/null
 while getopts ":i:w:u:p:" opt; do
   case $opt in
     i) IP="$OPTARG" ;;
-    w) Wordlist="$OPTARG" ;;
     u) username="$OPTARG" ;;
     p) new_password="$OPTARG" ;;
+    w) Wordlist="$OPTARG" ;;
   esac
 done
 
-if [ -z "$IP" ] || [ -z "$Wordlist" ] || [ -z "$username" ] || [ -z "$new_password" ]; then
-  echo "Usage: $0 -i 'The machine IP' -w 'Wordlist Path' -u 'Your username on thm' -p 'The new password' "
+if [ -z "$IP" ] || [ -z "$username" ] || [ -z "$new_password" ] || [ -z "$Wordlist" ]; then
+  echo "Usage: $0 -i 'The machine IP' -u 'Your username on thm' -p 'The new password' -w 'Wordlist Path'"
   exit 1
 fi
 
