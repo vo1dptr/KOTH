@@ -36,19 +36,15 @@ The scripts in this repository are specifically tailored for the following nine 
        
        cd KOTH
 
-3. Enable execution privileges for Run-Me-Only1Time & Run it :
-    
-       chmod +x Run-Me-Only1Time.sh && ./Run-Me-Only1Time.sh   
-
-4. Run Requirements :
+3. Run Requirements :
     
        sudo ./Requirements.sh 
 
-5. Change to the machine directory :
+4. Change to the machine directory :
        
        cd MACHINE-NAME
 
-6. Run the script :
+5. Run the script :
  
        ./Machine-NAME.sh
 
