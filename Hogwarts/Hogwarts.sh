@@ -16,7 +16,7 @@ rm -rf boot 2>/dev/null
 rm -rf .I_saved_it_harry 2>/dev/null
 rm -rf file.zip 2>/dev/null
 
-while getopts ":i:w:u:p:" opt; do
+while getopts ":i:u:p:w:" opt; do
   case $opt in
     i) IP="$OPTARG" ;;
     u) username="$OPTARG" ;;
