@@ -15,9 +15,9 @@ fi
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
-ssh -o StrictHostKeychecking=no -i id_rsa -p 1337 root@"$ip_address" << EOF
+ssh -o StrictHostKeychecking=no -i id_rsa -p 1337 root@"$IP" << EOF
 
-cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$nick"
+cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
 echo "root:$new_password" | chpasswd
 echo "gloria:$new_password" | chpasswd
 echo "marty:$new_password" | chpasswd
