@@ -1,6 +1,8 @@
 #!/bin/bash
 # Created by @H3X-007 :)
 
+# https://github.com/H3X-007/KOTH
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
