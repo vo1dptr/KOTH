@@ -13,7 +13,6 @@ missing unzip
 missing sshpass
 
 rm -rf boot 2>/dev/null
-rm -rf .I_saved_it_harry 2>/dev/null
 rm -rf file.zip 2>/dev/null
 
 while getopts ":i:u:p:w:" opt; do
