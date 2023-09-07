@@ -1,3 +1,0 @@
-# Typically, I brute force the user "rcampbell" using Hydra with the rockyou wordlist. The command is as follows:
-
-hydra -l rcampbell -w "WORDLIST PATH" ssh://"MACHINE IP" -t 64

