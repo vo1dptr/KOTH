@@ -1,16 +1,16 @@
 #!/bin/bash
 # Created by @H3X-007 :)
 
-nick="$1"
+username="$1"
 king="/root/king.txt"
 
 while true; do
-    current_nick=$(cat "$king")
-    if [ "$current_nick" != "$nick" ]; then
+    current_username=$(cat "$king")
+    if [ "$current_nick" != "$username" ]; then
         sudo umount /root/king.txt /root/king.txt
         put -ai /root/king.txt
-        echo "$nick" > "$king"
-        sudo tee "$king_txt" >/dev/null <<< "$nick"
+        echo "$username" > "$king"
+        sudo tee "$king" >/dev/null <<< "$username"
         put +ai /root/king.txt
         sudo mount --bind -o ro /root/king.txt /root/king.txt
     fi
