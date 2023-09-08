@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Created by @H3X-007 :)
 
 # https://github.com/H3X-007/KOTH

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Created by @H3X-007 :)
+
+# https://github.com/H3X-007/KOTH
+
 missing() {
   if ! command -v "$1" >/dev/null 2>&1; then
     echo "Install '$1' before running $0 script."

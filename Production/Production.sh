@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Created by @H3X-007 :)
+
+# https://github.com/H3X-007/KOTH
+
 while getopts ":i:u:p:" opt; do
   case $opt in
     i) IP="$OPTARG" ;;
