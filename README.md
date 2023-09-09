@@ -14,7 +14,7 @@
 
 ## King of the Hill Machines
 
-The scripts in this repository are specifically tailored for the following nine King of the Hill machines on TryHackMe:
+**The scripts in this repository are designed specifically for ten King of the Hill machines on TryHackMe**
 
 1. [Food](https://github.com/H3X-007/KOTH-v2/tree/main/Food)
 2. [Fortune](https://github.com/H3X-007/KOTH-v2/tree/main/Fortune)
@@ -25,6 +25,7 @@ The scripts in this repository are specifically tailored for the following nine 
 7. [Hogwarts](https://github.com/H3X-007/KOTH-v2/tree/main/Hogwarts)
 8. [Shrek](https://github.com/H3X-007/KOTH-v2/tree/main/Shrek)
 9. [Tyler](https://github.com/H3X-007/KOTH-v2/tree/main/Tyler)
+10. [Carnage](https://github.com/H3X-007/KOTH-v2/tree/main/Carnage)
 
 ## Usage
 
