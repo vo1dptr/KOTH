@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @H3X-007 :)
+# Created by @HaruKey :)
 
-# https://github.com/H3X-007/KOTH
+# https://github.com/H4ruKey/KOTH
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -16,7 +16,7 @@ if [[ $(id -u) -ne 0 ]]; then
 else
     echo -e "${GREEN}You have root privileges. Continuing with the script...${RESET}"
 fi
-echo -e "${GREEN}-----------------------------Created by H3X-007 :)-----------------------------${RESET}"
+echo -e "${GREEN}-----------------------------Created by HaruKey :)-----------------------------${RESET}"
 
 IP="$1"
 username="$2"

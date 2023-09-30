@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @H3X-007 :)
+# Created by @HaruKey :)
 
-# https://github.com/H3X-007/KOTH
+# https://github.com/H4ruKey/KOTH
 
 while getopts ":i:u:p:" opt; do
   case $opt in

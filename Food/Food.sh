@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @H3X-007 :)
+# Created by @HaruKey :)
 
-# https://github.com/H3X-007/KOTH
+# https://github.com/H4ruKey/KOTH
 
 missing() {
   if ! command -v "$1" >/dev/null 2>&1; then
