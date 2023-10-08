@@ -16,22 +16,22 @@
 
 **The scripts in this repository are designed specifically for ten King of the Hill machines on TryHackMe**
 
-1. [Food](https://github.com/H3X-007/KOTH-v2/tree/main/Food)
-2. [Fortune](https://github.com/H3X-007/KOTH-v2/tree/main/Fortune)
-3. [Panda](https://github.com/H3X-007/KOTH-v2/tree/main/Panda)
-4. [Production](https://github.com/H3X-007/KOTH-v2/tree/main/Production)
-5. [Lion](https://github.com/H3X-007/KOTH-v2/tree/main/Lion)
-6. [Hackers](https://github.com/H3X-007/KOTH-v2/tree/main/Hackers)
-7. [Hogwarts](https://github.com/H3X-007/KOTH-v2/tree/main/Hogwarts)
-8. [Shrek](https://github.com/H3X-007/KOTH-v2/tree/main/Shrek)
-9. [Tyler](https://github.com/H3X-007/KOTH-v2/tree/main/Tyler)
-10. [Carnage](https://github.com/H3X-007/KOTH-v2/tree/main/Carnage)
+1.  [Food](https://github.com/H4ruKey/KOTH/tree/main/Food)
+2.  [Fortune](https://github.com/H4ruKey/KOTH/tree/main/Fortune)
+3.  [Panda](https://github.com/H4ruKey/KOTH/tree/main/Panda)
+4.  [Production](https://github.com/H4ruKey/KOTH/tree/main/Production)
+5.  [Lion](https://github.com/H4ruKey/KOTH/tree/main/Lion)
+6.  [Hackers](https://github.com/H4ruKey/KOTH/tree/main/Hackers)
+7.  [Hogwarts](https://github.com/H4ruKey/KOTH/tree/main/Hogwarts)
+8.  [Shrek](https://github.com/H4ruKey/KOTH/tree/main/Shrek)
+9.  [Tyler](https://github.com/H4ruKey/KOTH/tree/main/Tyler)
+10. [Carnage](https://github.com/H4ruKey/KOTH/tree/main/Carnage)
 
 ## Usage
 
 1. Clone the repository:
     
-       git clone https://github.com/H3X-007/KOTH.git
+       git clone https://github.com/H4ruKey/KOTH.git
 
 2. Change to the KOTH-Scripts directory:
        
