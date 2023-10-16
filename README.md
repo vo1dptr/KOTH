@@ -1,8 +1,8 @@
 # King of the Hill Automated Scripts
 
-![banner](koth.png)
+![banner](img/koth.png)
 
-### This repository contains a collection of automated scripts created for the King of the Hill (KOTH) machines on TryHackMe. These scripts are designed for fun and to assist with gameplay on the KOTH machines. The scripts aim to automate certain tasks.
+### This repository contains a collection of automated scripts created for the King of the Hill (KOTH) machines on TryHackMe. These scripts are designed for fun and to assist with gameplay on the KOTH machines.
 
 ## Disclaimer
 

