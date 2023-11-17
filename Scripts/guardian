@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Created by @HaruKey :)
+# Created by @0xVoid :)
 
-# https://github.com/H4ruKey/KOTH
+# https://github.com/0x76OID/KOTH
 
 script_path="/usr/bin/check"
 ip="$1"
